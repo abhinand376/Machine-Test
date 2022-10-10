@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<nav class="main_nav">
+    <ul class="d-flex flex-row align-items-start justify-content-start">
+        {% if user.is_authenticated %}
+        <h3>Hello {{user.username}}</h3>
+        <li><a href="login">Logout</a></li>
+        {% else %}
+        <li><a href="signup">Register</a></li>
+        <li><a href="login">Login</a></li>
+        {% endif %}
+    </ul>
+</nav>
+</body>
+</html>
